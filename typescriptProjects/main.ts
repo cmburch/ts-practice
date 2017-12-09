@@ -40,6 +40,13 @@ class Point {
     x:number; 
     y:number;
 
+    //constructor reserved keyword in typescipt
+    //the ? makes parameters optional
+    constructor(x?:number,y?: number){
+        this.x = x;
+        this.y = y;
+    }
+
     draw(){
         console.log('X' + this.x + 'Y' + this.y);
     }
