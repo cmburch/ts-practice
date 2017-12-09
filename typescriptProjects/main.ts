@@ -30,3 +30,19 @@ drawPoint({
    x :1,
    y :2
 })
+
+//they code above has no cohesion like groups should be place together
+
+//use class for a better cohesion
+class Point {
+    //call them fields
+    x:number; 
+    y:number;
+
+    draw(){
+        //...
+    }
+    getDistance(another: Point){
+        //...
+    }
+}
