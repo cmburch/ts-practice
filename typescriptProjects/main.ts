@@ -17,34 +17,28 @@ log(message);
 // let endswithC = (<string>message).endsWith('c');
 // let alternativeWay = (message1 as string).endsWith('c');
 
-//interface defines shape of object
-interface Point1 {
-    x:number,
-    y:number
-}
-
-let drawPoint = (point:Point1)=>{
-    //..code goes here
-}
-
-drawPoint({
-   x :1,
-   y :2
-})
 
 //they code above has no cohesion like groups should be place together
 
 //use class for a better cohesion
 class Point {
     //call them fields
-    private x: number; 
-    private y: number;
+
+    //these variables are no long needed because of the redefined constructor
+    // private x: number; 
+    // private y: number;
 
     //constructor reserved keyword in typescipt
     //the ? makes parameters optional
-    constructor(x?:number,y?: number){
-        this.x = x;
-        this.y = y;
+
+    //below the constructor is a better and shorter way
+
+    // constructor(x?:number,y?: number){
+    //     this.x = x;
+    //     this.y = y;
+    // }
+
+    constructor(private x?:number,private y?: number){   
     }
 
     draw(){
@@ -53,6 +47,7 @@ class Point {
     getDistance(another: Point){
         //...
     }
+    
 }
 
 let point = new Point();
