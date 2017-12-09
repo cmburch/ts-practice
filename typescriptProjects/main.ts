@@ -37,8 +37,8 @@ drawPoint({
 //use class for a better cohesion
 class Point {
     //call them fields
-    x:number; 
-    y:number;
+    private x: number; 
+    private y: number;
 
     //constructor reserved keyword in typescipt
     //the ? makes parameters optional
@@ -56,7 +56,8 @@ class Point {
 }
 
 let point = new Point();
-point.x = 1;
-point.y = 2;
+//thes variables are all private and cannot be accessed
+// point.x = 1;  
+// point.y = 2;
 
 point.draw();
